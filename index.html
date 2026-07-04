@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" id="dynamic-favicon" type="image/png" href="/src/assets/images/xtreme_badge_logo.jpg" />
+    <title>EXTREME FITNESS STUDIO</title>
+    <script>
+      (function() {
+        const img = new Image();
+        img.src = '/src/assets/images/xtreme_badge_logo.jpg';
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          canvas.width = 64;
+          canvas.height = 64;
+          const ctx = canvas.getContext('2d');
+          ctx.beginPath();
+          ctx.arc(32, 32, 32, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(img, 0, 0, 64, 64);
+          const link = document.getElementById('dynamic-favicon');
+          if (link) {
+            link.href = canvas.toDataURL('image/png');
+          }
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Fast Pre-Loader (Visible before React bundle loads, outside root so it can fade out smoothly) -->
+    <div id="html-preloader" style="position: fixed; inset: 0; z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(ellipse 110% 110% at 50% 50%, #080808 0%, #040404 60%, #000000 100%); overflow: hidden; font-family: sans-serif; transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); opacity: 1; transform: scale(1);">
+      <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="position: absolute; width: clamp(340px,46vw,540px); height: clamp(340px,46vw,540px); border-radius: 50%; border: 1px solid rgba(250,204,21,0.2); box-shadow: inset 0 0 30px rgba(250,204,21,0.08); animation: htmlRingCW 20s linear infinite;"></div>
+        <img src="/src/assets/images/xtreme_badge_logo.jpg" style="width: clamp(180px,25vw,300px); height: clamp(180px,25vw,300px); object-fit: cover; border-radius: 50%; display: block; position: relative; z-index: 2;" alt="Loading..." />
+      </div>
+      <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; overflow: hidden;">
+        <div style="height: 2px; width: 100%; background: linear-gradient(90deg,#0a0900 0%,#b8970b 30%,#facc15 60%,#ffffff 74%,#facc15 88%,transparent 100%); animation: htmlBar 1.9s cubic-bezier(0.4,0,0.2,1) infinite; box-shadow: 0 0 12px rgba(250,204,21,0.6),0 0 28px rgba(250,204,21,0.2);"></div>
+      </div>
+      <style>
+        @keyframes htmlRingCW { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes htmlBar { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+      </style>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

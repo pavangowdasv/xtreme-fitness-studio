@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Remix: XTREME FITNESS",
+  "description": "A premium, high-performance fitness center featuring world-class coaching, strength \u0026 power training, metabolic ignition, and custom membership plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
