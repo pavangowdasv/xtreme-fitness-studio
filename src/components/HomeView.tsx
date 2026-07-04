@@ -11,6 +11,7 @@ import {
 } from '../types';
 import xtremeLogo from '../assets/images/xtreme_logo.png';
 import xtremeBadgeLogo from '../assets/images/xtreme_badge_logo.jpg';
+import heroImage from '../assets/images/hero_image.jpg';
 
 // Detailed program content (mirrored from ProgramsView)
 const DETAILED_PROGRAM_CONTENT: Record<string, {
@@ -558,7 +559,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0.3) 12%, transparent 30%)', zIndex: 2, pointerEvents: 'none' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #000000 0%, rgba(0,0,0,0.4) 15%, transparent 40%)', zIndex: 2, pointerEvents: 'none' }} />
               <img
-                src="/src/assets/images/hero_image.jpg"
+                src={heroImage}
                 alt="XTREME FITNESS Trainer"
                 style={{
                   width: '100%',
@@ -751,7 +752,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
           }}
         >
           <img
-            src="/src/assets/images/hero_image.jpg"
+            src={heroImage}
             alt="XTREME FITNESS Trainer"
             style={{
               width: '100%',

@@ -4,6 +4,10 @@ import {
   Trophy, Medal, Award, Dumbbell, ShieldCheck, Star, Check, Quote, Calendar, Activity
 } from 'lucide-react';
 import { TRAINER_DATA } from '../types';
+import mensFitness30 from '../assets/images/Men\'s Fitness 30+.png';
+import mensClassicPhysique from '../assets/images/Men\'s Classic Physique.png';
+import bodybuildingNatural from '../assets/images/Bodybuilding Natural Competition.png';
+import headTrainer from '../assets/images/HEAD TRAINER.png';
 
 interface TrainersViewProps {
   onOpenEnroll: (planId?: string, programId?: string) => void;
@@ -29,7 +33,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
       category: "Men's Fitness 30+",
       placement: '3rd Place',
       description: 'Demonstrated exceptional dedication, conditioning, and performance at the ICN India Natural Fitness & Bodybuilding Championship.',
-      image: "/src/assets/images/Men's Fitness 30+.png",
+      image: mensFitness30,
       badgeColor: 'bg-amber-500/15 text-amber-400 border-amber-500/30'
     },
     {
@@ -38,7 +42,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
       category: "Men's Classic Physique",
       placement: '3rd Place',
       description: 'Demonstrated exceptional dedication, conditioning, and performance at the ICN India Natural Fitness & Bodybuilding Championship.',
-      image: "/src/assets/images/Men's Classic Physique.png",
+      image: mensClassicPhysique,
       badgeColor: 'bg-amber-500/15 text-amber-400 border-amber-500/30'
     },
     {
@@ -47,7 +51,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
       category: 'Bodybuilding Natural Competition',
       placement: '5th Place',
       description: 'Demonstrated exceptional dedication, conditioning, and performance at the ICN India Natural Fitness & Bodybuilding Championship.',
-      image: "/src/assets/images/Bodybuilding Natural Competition.png",
+      image: bodybuildingNatural,
       badgeColor: 'bg-yellow-500/15 text-yellow-400 border-yellow-500/30'
     }
   ];
@@ -134,7 +138,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
             >
               {/* No border, no clip, no rounding — full image shown */}
               <img 
-                src="/src/assets/images/HEAD TRAINER.png" 
+                src={headTrainer} 
                 alt={trainer.name} 
                 style={{
                   width: '100%',
