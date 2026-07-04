@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import xtremeBadgeLogo from '../assets/images/xtreme_badge_logo.jpg';
 
 interface NavbarProps {
   currentTab: 'home' | 'membership' | 'trainers' | 'register' | 'contact' | 'gallery';
@@ -67,7 +68,7 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenEnroll }: Navb
               id="navbar-logo"
             >
               <img
-                src="/src/assets/images/xtreme_badge_logo.jpg"
+                src={xtremeBadgeLogo}
                 alt="XTREME FITNESS STUDIO Logo"
                 style={{
                   height: isScrolled ? '48px' : '58px',

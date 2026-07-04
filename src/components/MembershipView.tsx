@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { 
   Check, Sparkles, ShieldCheck, Dumbbell, Zap, Coffee, Award, Users
 } from 'lucide-react';
+import xtremeBadgeLogo from '../assets/images/xtreme_badge_logo.jpg';
 
 interface MembershipViewProps {
   onOpenEnroll: (planId?: string) => void;
@@ -110,7 +111,7 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
           </div>
           <div className="shrink-0 bg-neutral-950/40 p-2.5 rounded-full border border-neutral-800/40 shadow-inner">
             <img 
-              src="/src/assets/images/xtreme_badge_logo.jpg" 
+              src={xtremeBadgeLogo} 
               alt="XTREME FITNESS STUDIO Logo" 
               className="h-28 w-28 md:h-36 md:w-36 object-cover rounded-full border border-neutral-900 shadow-2xl"
               referrerPolicy="no-referrer"

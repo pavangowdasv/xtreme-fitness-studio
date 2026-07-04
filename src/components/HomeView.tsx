@@ -9,6 +9,8 @@ import {
 import { 
   PROGRAM_DATA, PLAN_DATA, TESTIMONIAL_DATA, GALLERY_IMAGES 
 } from '../types';
+import xtremeLogo from '../assets/images/xtreme_logo.png';
+import xtremeBadgeLogo from '../assets/images/xtreme_badge_logo.jpg';
 
 // Detailed program content (mirrored from ProgramsView)
 const DETAILED_PROGRAM_CONTENT: Record<string, {
@@ -351,7 +353,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
               {/* Logo block */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%', maxWidth: '870px' }}>
                 <img
-                  src="/src/assets/images/xtreme_logo.png"
+                  src={xtremeLogo}
                   alt="XTREME FITNESS STUDIO"
                   style={{
                     width: '100%',
@@ -804,7 +806,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
           {/* Logo block */}
           <div style={{ width: '90%', maxWidth: '440px', display: 'flex', justifyContent: 'center' }}>
             <img
-              src="/src/assets/images/xtreme_logo.png"
+              src={xtremeLogo}
               alt="XTREME FITNESS STUDIO"
               style={{
                 width: '100%',

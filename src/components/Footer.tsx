@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dumbbell, MapPin, Phone, Mail, Clock, Instagram, Youtube, ArrowUp } from 'lucide-react';
+import xtremeBadgeLogo from '../assets/images/xtreme_badge_logo.jpg';
 
 // Official WhatsApp Logo SVG (Bootstrap Icons quality)
 const WhatsAppLogo = ({ className }: { className?: string }) => (
@@ -36,7 +37,7 @@ export default function Footer({ setCurrentTab }: FooterProps) {
         <div className="space-y-4">
           <div className="flex items-center">
             <img 
-              src="/src/assets/images/xtreme_badge_logo.jpg" 
+              src={xtremeBadgeLogo} 
               alt="XTREME FITNESS STUDIO Logo" 
               className="h-20 w-20 object-cover rounded-full border border-neutral-800 shadow-lg"
               referrerPolicy="no-referrer"
