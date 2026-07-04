@@ -61,10 +61,12 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
       
       {/* 1. TRAINER HERO SECTION WITH LOOPING VIDEO */}
       <section 
-        className="relative py-40 overflow-hidden bg-neutral-950 w-full" 
+        className="relative overflow-hidden bg-neutral-950 w-full" 
         id="trainer-hero"
         style={{
-          minHeight: '550px',
+          minHeight: 'clamp(420px, 70vw, 700px)',
+          paddingTop: 'clamp(80px, 15vw, 160px)',
+          paddingBottom: 'clamp(60px, 10vw, 160px)',
         }}
       >
         {/* Full-bleed background video player */}
@@ -76,9 +78,14 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
             loop
             playsInline
             src="/trainer vedio.MOV"
-            className="w-full h-full object-cover object-center opacity-70 filter brightness-125 contrast-110 scale-105"
             style={{
               display: 'block',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              opacity: 0.7,
+              filter: 'brightness(1.25) contrast(1.1)',
             }}
           >
             Your browser does not support the video tag.

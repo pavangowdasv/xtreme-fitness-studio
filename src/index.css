@@ -96,3 +96,37 @@ video {
     gap: 0.5rem !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   TRAINER HERO VIDEO — mobile alignment
+   ═══════════════════════════════════════════════════════════ */
+
+/* The absolute container needs full height relative to the section */
+#trainer-hero > div:first-child {
+  position: absolute;
+  inset: 0;
+}
+
+@media (max-width: 640px) {
+  /* On mobile, pin the video to show the top (face/body) of portrait footage */
+  #trainer-hero video {
+    object-position: center top !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Tighten text container padding on small screens */
+  #trainer-hero .relative.z-20 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    text-align: center !important;
+  }
+
+  /* Scale down the heading on very small screens */
+  #trainer-hero h1 {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+    line-height: 1 !important;
+  }
+}
+
