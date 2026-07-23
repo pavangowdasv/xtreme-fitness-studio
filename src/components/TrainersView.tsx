@@ -203,7 +203,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
 
             <div className="space-y-4 text-neutral-300 text-sm sm:text-base leading-relaxed font-sans" id="trainer-detailed-bio">
               <p>
-                MITHUN GOWDA SHIVARAJU is the athletic architect and cornerstone of performance at XTREME FITNESS STUDIO. 
+                MITHUN GOWDA SHIVARAJU is the master architect and cornerstone of performance at XTREME FITNESS STUDIO. 
                 As a former competitive powerlifter and recognized natural bodybuilding competitor, he specializes in biomechanical analysis, advanced loading models, and peak physique transformations. 
                 With over 16+ years of coaching elite lifters and everyday fitness enthusiasts, Mithun brings a scientific, progressive approach to force creation and subcutaneous fat depletion.
               </p>

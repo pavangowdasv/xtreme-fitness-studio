@@ -24,7 +24,7 @@ export default function ContactView({ setCurrentTab }: ContactViewProps) {
           
           <div className="inline-flex items-center space-x-2 bg-yellow-400/10 border border-yellow-400/20 px-3 py-1 rounded-full">
             <span className="font-mono text-[9px] font-bold text-yellow-400 uppercase tracking-widest">
-              DIRECT ATHLETIC ACCESS
+              DIRECT MEMBER ACCESS
             </span>
           </div>
           
@@ -188,7 +188,7 @@ export default function ContactView({ setCurrentTab }: ContactViewProps) {
               CONNECT WITH THE FORGE
             </h3>
             <p className="text-xs text-neutral-400 max-w-md mx-auto leading-relaxed">
-              Join active gym conversations, track professional lifters, and get real-time athletic logs.
+              Join active gym conversations, track professional lifters, and get real-time workout logs.
             </p>
           </div>
 

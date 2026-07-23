@@ -105,7 +105,7 @@ export const PROGRAM_DATA: Program[] = [
   {
     id: 'cross-fit',
     title: 'CROSS FIT',
-    description: 'High-intensity functional training programs that improve strength, endurance, agility, and overall athletic performance.',
+    description: 'High-intensity functional training programs that improve strength, endurance, agility, and overall physical performance.',
     duration: '8-Week Cycle',
     intensity: 'Extreme',
     rating: 4.8,

@@ -44,7 +44,7 @@ export default function Footer({ setCurrentTab }: FooterProps) {
             />
           </div>
           <p className="text-sm text-neutral-400 leading-relaxed">
-            The premium forge of athletic supremacy. Our world-class coaches and elite-grade equipment are here to engineer your peak physical potential.
+            The premium forge of physical supremacy. Our world-class coaches and elite-grade equipment are here to engineer your peak physical potential.
           </p>
           <div className="flex space-x-3 pt-2">
             <a 

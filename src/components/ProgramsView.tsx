@@ -77,7 +77,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
   },
   'weight-gain': {
     name: 'WEIGHT GAIN & BULKING',
-    overview: 'Calibrated specifically for individuals struggling to build high-quality muscle volume. This program pairs high-volume sarcoplasmic hypertrophy techniques with dense calorie programming to safely and systematically pack on size and athletic frame thickness.',
+    overview: 'Calibrated specifically for individuals struggling to build high-quality muscle volume. This program pairs high-volume sarcoplasmic hypertrophy techniques with dense calorie programming to safely and systematically pack on size and solid frame thickness.',
     benefits: [
       'Trigger significant muscular cross-sectional area growth (hypertrophy)',
       'Keep your body in a sustained anabolic state through structured caloric surplus',
@@ -567,7 +567,7 @@ export default function ProgramsView({ onOpenEnroll }: ProgramsViewProps) {
                   MASTER COACHING STAFF
                 </h4>
                 <p className="text-xs text-neutral-400 leading-relaxed">
-                  Our coaches hold certified athletic qualifications to supervise forms, calibrate weights, and guide nutrition blocks.
+                  Our coaches hold certified professional qualifications to supervise forms, calibrate weights, and guide nutrition blocks.
                 </p>
               </div>
             </div>
