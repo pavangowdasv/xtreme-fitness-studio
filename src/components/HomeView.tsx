@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from 'motion/react';
 import { 
   ArrowRight, Shield, Award, Users, Trophy, ChevronRight, Star, 
   MapPin, Phone, Mail, Clock, Flame, Calendar,
@@ -116,6 +116,104 @@ const testimonialSlideVariants = {
 interface HomeViewProps {
   setCurrentTab: (tab: 'home' | 'membership' | 'trainers' | 'register' | 'contact' | 'gallery') => void;
   onOpenEnroll: (planId?: string, programId?: string) => void;
+}
+
+// ─── Program card icon lookup ─────────────────────────────────────────────────
+function getProgramCardIcon(id: string) {
+  const cls = 'h-5 w-5 text-yellow-400 stroke-[2]';
+  const map: Record<string, React.ReactElement> = {
+    'strength-training': <Dumbbell className={cls} />,
+    'weight-loss':       <Flame    className={cls} />,
+    'weight-gain':       <TrendingUp className={cls} />,
+    'personal-training': <Target   className={cls} />,
+    'cross-fit':         <Zap      className={cls} />,
+    'diet-counselling':  <Apple    className={cls} />,
+    'bodybuilding':      <Award    className={cls} />,
+  };
+  return map[id] ?? <Dumbbell className={cls} />;
+}
+
+// ─── 3-D Tilt Card ────────────────────────────────────────────────────────────
+interface ProgramTiltCardProps {
+  program: { id: string; image: string; title: string; description: string; intensity: string };
+}
+
+function ProgramTiltCard({ program }: ProgramTiltCardProps) {
+  const ref = React.useRef<HTMLDivElement>(null);
+
+  const rawX = useMotionValue(0);
+  const rawY = useMotionValue(0);
+
+  const springConfig = { stiffness: 200, damping: 22, mass: 0.6 };
+  const x = useSpring(rawX, springConfig);
+  const y = useSpring(rawY, springConfig);
+
+  const rotateY = useTransform(x, [-0.5, 0.5], [-12, 12]);
+  const rotateX = useTransform(y, [-0.5, 0.5], [10, -10]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    rawX.set((e.clientX - rect.left) / rect.width - 0.5);
+    rawY.set((e.clientY - rect.top)  / rect.height - 0.5);
+  };
+
+  const handleMouseLeave = () => {
+    rawX.set(0);
+    rawY.set(0);
+  };
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ perspective: 900 }}
+      className="col-span-1 h-[385px]"
+    >
+      <motion.div
+        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        className="relative border overflow-hidden rounded-2xl shadow-xl bg-neutral-900/60 border-neutral-800 h-full w-full flex flex-col justify-between"
+        id={`home-program-card-${program.id}`}
+      >
+        {/* Image area */}
+        <div className="relative h-48 w-full overflow-hidden bg-neutral-950 shrink-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/30 z-10" />
+          <img
+            src={program.image}
+            alt={program.title}
+            className="w-full h-full object-cover select-none"
+            referrerPolicy="no-referrer"
+          />
+          <div
+            style={{ transform: 'translateZ(24px)' }}
+            className="absolute top-4 left-4 z-20 bg-neutral-950/95 backdrop-blur-md border border-neutral-800 p-2.5 rounded-xl shadow-md"
+          >
+            {getProgramCardIcon(program.id)}
+          </div>
+          <div className="absolute bottom-4 right-4 z-20 bg-black/90 backdrop-blur-sm border border-neutral-700 px-2.5 py-1 rounded-md">
+            <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">
+              {program.intensity} TIER
+            </span>
+          </div>
+        </div>
+
+        {/* Text area */}
+        <div className="p-6 flex flex-col flex-grow">
+          <h3
+            style={{ transform: 'translateZ(16px)' }}
+            className="text-base font-sans font-black text-white uppercase tracking-tight mb-3"
+          >
+            {program.title}
+          </h3>
+          <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed font-sans line-clamp-4">
+            {program.description}
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
 }
 
 export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps) {
@@ -1157,32 +1255,9 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
           {/* Programs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="home-programs-grid">
             {PROGRAM_DATA.map((program) => (
-              <div
-                key={program.id}
-                className="col-span-1 border overflow-hidden rounded-2xl shadow-xl bg-neutral-900/60 border-neutral-900 h-[385px] flex flex-col justify-between"
-                id={`home-program-card-${program.id}`}
-              >
-                <div className="flex flex-col justify-between h-full w-full">
-                  <div className="relative h-48 w-full overflow-hidden bg-neutral-950 shrink-0">
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/30 z-10" />
-                    <img src={program.image} alt={program.title} className="w-full h-full object-cover select-none" referrerPolicy="no-referrer" />
-                    <div className="absolute top-4 left-4 z-20 bg-neutral-950/95 backdrop-blur-md border border-neutral-800 p-2.5 rounded-xl shadow-md">
-                      {getProgramIcon(program.id)}
-                    </div>
-                    <div className="absolute bottom-4 right-4 z-20 bg-black/90 backdrop-blur-sm border border-neutral-850 px-2.5 py-1 rounded-md">
-                      <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">{program.intensity} TIER</span>
-                    </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-base font-sans font-black text-white uppercase tracking-tight mb-3">
-                      {program.title}
-                    </h3>
-                    <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed font-sans line-clamp-4">
-                      {program.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <React.Fragment key={program.id}>
+                <ProgramTiltCard program={program} />
+              </React.Fragment>
             ))}
           </div>
 
