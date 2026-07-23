@@ -20,11 +20,11 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
       finalPrice: 2000,
       description: 'Ideal for short-term flexibility with full-access performance tools.',
       features: [
-        'Unlimited access to gym floor & turf',
         'Advanced cardio deck & strength equipment',
-        'Locker room & hygienic shower facilities',
         'Initial physical fitness evaluation session',
-        '24/7 client portal & tracking app features'
+        '24/7 client portal & tracking app features',
+        'Monthly InBody composition analysis',
+        'Customized nutrition guidelines scorecard'
       ],
       popular: false
     },
@@ -37,9 +37,7 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
       description: 'The standard choice for committed fitness builders tracking progress.',
       features: [
         'Everything in Monthly Plan',
-        'Save ₹2,000 over 3 Months',
-        'Monthly InBody composition analysis',
-        'Customized nutrition guidelines scorecard'
+        'Save ₹2,000 over 3 Months'
       ],
       popular: false
     },
@@ -49,12 +47,10 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
       originalPrice: 12000,
       discount: 5000,
       finalPrice: 7000,
-      description: 'Exceptional mid-term value for serious athletic transformations.',
+      description: 'Exceptional mid-term value for serious physical transformations.',
       features: [
-        'Everything in Quarterly Plan',
-        'Save ₹5,000 over 6 Months',
-        'Priority coaching workshop reservations',
-        'XTREME FITNESS athletic training manual'
+        'Everything in Monthly Plan',
+        'Save ₹5,000 over 6 Months'
       ],
       popular: false
     },
@@ -66,11 +62,8 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
       finalPrice: 10000,
       description: 'The ultimate fitness commitment. Absolute maximum cost-savings rate.',
       features: [
-        'Everything in 6 Months Plan',
-        'Save ₹14,000 over 12 Months',
-        'Complimentary generalized diet plan & tips',
-        'Standard barcode or app-based check-in',
-        'Direct priority WhatsApp trainer feedback channel'
+        'Everything in Monthly Plan',
+        'Save ₹14,000 over 12 Months'
       ],
       popular: true,
       badge: 'Best Value'
@@ -106,7 +99,7 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
               FORGE YOUR ULTIMATE ACCELERATION
             </h1>
             <p className="text-xs sm:text-sm text-neutral-400 mt-3 leading-relaxed">
-              Flexible, high-performance memberships designed with complete transparency. Simple billing, zero setup charges, and focused athletic results.
+              Flexible, high-performance memberships designed with complete transparency. Simple billing, zero setup charges, and focused fitness results.
             </p>
           </div>
           <div className="shrink-0 bg-neutral-950/40 p-2.5 rounded-full border border-neutral-800/40 shadow-inner">
@@ -250,7 +243,7 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
                 </span>
               </div>
               <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed">
-                Unlock specialized 1-on-1 athletic coaching tailored precisely to your mechanical layout. Includes weekly customized programming and strict nutritional tracking.
+                Unlock specialized 1-on-1 personal coaching tailored precisely to your mechanical layout. Includes weekly customized programming and strict nutritional tracking.
               </p>
               <p className="text-[11px] text-neutral-500 font-mono italic">
                 * Note: Personal Training charges are separate and general membership fees are not included in this rate.
