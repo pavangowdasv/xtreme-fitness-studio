@@ -40,7 +40,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
   },
   'weight-gain': {
     name: 'WEIGHT GAIN & BULKING',
-    overview: 'Calibrated specifically for individuals struggling to build high-quality muscle volume. This program pairs high-volume sarcoplasmic hypertrophy techniques with dense calorie programming to safely and systematically pack on size and athletic frame thickness.',
+    overview: 'Calibrated specifically for individuals struggling to build high-quality muscle volume. This program pairs high-volume sarcoplasmic hypertrophy techniques with dense calorie programming to safely and systematically pack on size and solid frame thickness.',
     benefits: ['Trigger significant muscular cross-sectional area growth (hypertrophy)','Keep your body in a sustained anabolic state through structured caloric surplus','Improve structural leverage, boosting absolute compound loading potential','Enhance intramuscular glycogen storage capacity for continuous power'],
     trainingMethods: ['Hypertrophy-focused range-of-motion loading and deep mechanical tension','Targeted muscle-mind connection drills and isolated fatigue mapping','Progressively scaled volume schemes across focused weekly microcycles','Consistent caloric tracking adjustments and recovery pacing logs'],
     suitableFor: ['Hardgainers and ectomorphs wanting to build solid, lasting muscle bulk','Competitive lifters seeking to move up a weight class safely','Anyone wishing to establish a broader, thicker, and more robust physique'],
@@ -1067,7 +1067,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
                   ELITE HEAD COACH
                 </h3>
                 <p className="text-sm text-neutral-400 mt-3 leading-relaxed">
-                  Our Head Trainer is not a certification-mill trainer. He is a competitive lifter, athletic performance specialist, and active practitioner dedicated to your optimization.
+                  Our Head Trainer is not a certification-mill trainer. He is a competitive lifter, strength performance specialist, and active practitioner dedicated to your optimization.
                 </p>
               </div>
               <span className="block font-mono text-[10px] text-neutral-600 mt-6 uppercase tracking-widest">
@@ -1156,133 +1156,34 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
 
           {/* Programs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="home-programs-grid">
-            {PROGRAM_DATA.map((program) => {
-              const isExpanded = expandedProgramId === program.id;
-              const details = DETAILED_PROGRAM_CONTENT[program.id] || {
-                name: program.title,
-                overview: program.description,
-                benefits: program.benefits,
-                trainingMethods: ['Bespoke progressive overload.', 'Technique monitoring.'],
-                suitableFor: ['Dedicated lifters.'],
-                durationInfo: { length: program.duration, frequency: '3-4 sessions per week', sessionLength: '60-75 minutes' }
-              };
-              return (
-                <motion.div
-                  key={program.id}
-                  layout="position"
-                  transition={{ type: 'spring', stiffness: 220, damping: 26 }}
-                  onClick={() => handleProgramCardClick(program.id)}
-                  className={`group border overflow-hidden rounded-2xl shadow-xl transition-all duration-300 relative flex flex-col justify-between ${
-                    isExpanded
-                      ? 'col-span-1 sm:col-span-2 lg:col-span-4 bg-neutral-900/90 border-yellow-400/50 p-1'
-                      : 'col-span-1 bg-neutral-900/60 hover:bg-neutral-900 border-neutral-900 hover:border-yellow-400/35 h-[385px] hover:-translate-y-1'
-                  } cursor-pointer`}
-                  id={`home-program-card-${program.id}`}
-                >
-                  {!isExpanded ? (
-                    <div className="flex flex-col justify-between h-full w-full">
-                      <div className="relative h-48 w-full overflow-hidden bg-neutral-950 shrink-0">
-                        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/30 z-10" />
-                        <div className="absolute inset-0 bg-yellow-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                        <img src={program.image} alt={program.title} className="w-full h-full object-cover select-none group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
-                        <div className="absolute top-4 left-4 z-20 bg-neutral-950/95 backdrop-blur-md border border-neutral-800 p-2.5 rounded-xl shadow-md">
-                          {getProgramIcon(program.id)}
-                        </div>
-                        <div className="absolute bottom-4 right-4 z-20 bg-black/90 backdrop-blur-sm border border-neutral-850 px-2.5 py-1 rounded-md">
-                          <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">{program.intensity} TIER</span>
-                        </div>
-                      </div>
-                      <div className="p-6 flex flex-col flex-grow">
-                        <h3 className="text-base font-sans font-black text-white uppercase tracking-tight group-hover:text-yellow-400 transition-colors duration-200 mb-3">
-                          {program.title}
-                        </h3>
-                        <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed font-sans line-clamp-4">
-                          {program.description}
-                        </p>
-                      </div>
+            {PROGRAM_DATA.map((program) => (
+              <div
+                key={program.id}
+                className="col-span-1 border overflow-hidden rounded-2xl shadow-xl bg-neutral-900/60 border-neutral-900 h-[385px] flex flex-col justify-between"
+                id={`home-program-card-${program.id}`}
+              >
+                <div className="flex flex-col justify-between h-full w-full">
+                  <div className="relative h-48 w-full overflow-hidden bg-neutral-950 shrink-0">
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/30 z-10" />
+                    <img src={program.image} alt={program.title} className="w-full h-full object-cover select-none" referrerPolicy="no-referrer" />
+                    <div className="absolute top-4 left-4 z-20 bg-neutral-950/95 backdrop-blur-md border border-neutral-800 p-2.5 rounded-xl shadow-md">
+                      {getProgramIcon(program.id)}
                     </div>
-                  ) : (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="w-full text-white font-sans flex flex-col lg:flex-row gap-6 p-6 lg:p-8"
-                    >
-                      {/* Left: Visual + Parameters */}
-                      <div className="w-full lg:w-1/3 shrink-0 flex flex-col justify-between space-y-4">
-                        <div className="relative rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950 aspect-video lg:aspect-auto lg:h-64">
-                          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent z-10" />
-                          <img src={program.image} alt={program.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                          <div className="absolute bottom-4 left-4 z-20">
-                            <div className="inline-flex items-center gap-1.5 bg-yellow-400 text-black px-2.5 py-1 rounded-md text-[10px] font-mono font-black uppercase tracking-wider">
-                              <Activity className="h-3 w-3 stroke-[2.5]" />
-                              <span>{program.intensity} INTENSITY</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="bg-neutral-950/80 border border-neutral-800/60 p-5 rounded-xl space-y-4">
-                          <h4 className="font-sans font-black text-xs text-neutral-400 uppercase tracking-wider border-b border-neutral-800 pb-2.5">Program Parameters</h4>
-                          <div className="divide-y divide-neutral-800/60 text-xs">
-                            <div className="flex justify-between py-2.5 gap-4"><span className="text-neutral-400 font-medium shrink-0">Duration</span><span className="font-mono text-yellow-400 font-bold text-right">{details.durationInfo.length}</span></div>
-                            <div className="flex justify-between py-2.5 gap-4"><span className="text-neutral-400 font-medium shrink-0">Frequency</span><span className="font-mono text-yellow-400 font-bold text-right">{details.durationInfo.frequency}</span></div>
-                            <div className="flex justify-between py-2.5 gap-4"><span className="text-neutral-400 font-medium shrink-0">Session Length</span><span className="font-mono text-yellow-400 font-bold text-right">{details.durationInfo.sessionLength}</span></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Right: Details + Benefits + CTA */}
-                      <div className="flex-grow flex flex-col justify-between space-y-6 lg:pl-4">
-                        <div className="space-y-4">
-                          <div className="flex justify-between items-start gap-4">
-                            <div>
-                              <span className="font-mono text-[10px] font-bold text-yellow-400 uppercase tracking-widest block mb-1">PROGRAM DETAILS</span>
-                              <h3 className="text-2xl sm:text-3xl font-sans font-black text-white uppercase tracking-tight">{details.name}</h3>
-                            </div>
-                            <div className="p-2 bg-yellow-400/10 text-yellow-400 rounded-lg border border-yellow-400/20">{getProgramIcon(program.id)}</div>
-                          </div>
-                          <p className="text-neutral-300 text-sm leading-relaxed max-w-3xl">{details.overview}</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/40 rounded-xl">
-                            <h4 className="text-xs font-black uppercase text-yellow-400 tracking-wider flex items-center gap-2"><Award className="h-4 w-4" /> Core Benefits</h4>
-                            <ul className="space-y-2">
-                              {details.benefits.map((b, i) => (
-                                <li key={i} className="flex items-start gap-2.5 text-xs text-neutral-300 leading-relaxed">
-                                  <Check className="h-3.5 w-3.5 text-yellow-400 shrink-0 mt-0.5" /><span>{b}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/40 rounded-xl">
-                            <h4 className="text-xs font-black uppercase text-yellow-400 tracking-wider flex items-center gap-2"><Target className="h-4 w-4" /> Methodology Focus</h4>
-                            <ul className="space-y-2">
-                              {details.trainingMethods.map((m, i) => (
-                                <li key={i} className="flex items-start gap-2 text-xs text-neutral-300 leading-relaxed">
-                                  <span className="font-mono text-yellow-400 font-bold shrink-0">{i + 1}.</span><span>{m}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-4 pt-4 border-t border-neutral-800/40">
-                          <button
-                            onClick={(e) => { 
-                              e.stopPropagation(); 
-                              setCurrentTab('register'); 
-                              window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                            }}
-                            className="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-300 text-black font-sans font-black px-6 py-3 rounded-xl tracking-wider uppercase transition-all duration-300 cursor-pointer text-xs"
-                          >
-                            <span>BOOK PROGRAM NOW</span>
-                            <ArrowRight className="h-4 w-4 ml-2" />
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </motion.div>
-              );
-            })}
+                    <div className="absolute bottom-4 right-4 z-20 bg-black/90 backdrop-blur-sm border border-neutral-850 px-2.5 py-1 rounded-md">
+                      <span className="font-mono text-[9px] font-bold text-neutral-300 tracking-wider uppercase">{program.intensity} TIER</span>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-base font-sans font-black text-white uppercase tracking-tight mb-3">
+                      {program.title}
+                    </h3>
+                    <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed font-sans line-clamp-4">
+                      {program.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Assurance Row */}
@@ -1298,7 +1199,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
               <div className="p-3 bg-yellow-400/10 text-yellow-400 rounded-xl border border-yellow-400/20 shrink-0"><Award className="h-6 w-6" /></div>
               <div className="space-y-1.5">
                 <h4 className="font-sans font-bold text-sm text-white uppercase tracking-wider">MASTER COACHING STAFF</h4>
-                <p className="text-xs text-neutral-400 leading-relaxed">Our coaches hold certified athletic qualifications to supervise forms, calibrate weights, and guide nutrition blocks.</p>
+                <p className="text-xs text-neutral-400 leading-relaxed">Our coaches hold certified professional qualifications to supervise forms, calibrate weights, and guide nutrition blocks.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
