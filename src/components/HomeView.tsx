@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ArrowRight, Shield, Award, Users, Trophy, ChevronRight, Star, 
-  MapPin, Phone, Mail, Clock, Flame, Weight, Calendar,
+  MapPin, Phone, Mail, Clock, Flame, Calendar,
   Dumbbell, Zap, Target, TrendingUp,
   Apple, Salad, ShieldCheck, Check, Activity
 } from 'lucide-react';
@@ -88,82 +88,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
   }
 };
 
-const ABOUT_FEATURES = [
-  {
-    Icon: Weight,
-    title: 'State-of-the-Art Equipment',
-    desc: 'Train with premium Hammer Strength, Life Fitness, and Eleiko gear.'
-  },
-  {
-    Icon: Flame,
-    title: 'Dedicated Strength & Cardio Zones',
-    desc: 'Calibrated areas designed to maximize your lifting and conditioning focus.'
-  },
-  {
-    Icon: Award,
-    title: 'Certified Head Trainer',
-    desc: 'Direct coaching from elite coaches with international certifications.'
-  },
-  {
-    Icon: Users,
-    title: 'Spacious Workout Environment',
-    desc: 'High-ceiling, temperature-controlled layout with plenty of room to move.'
-  },
-  {
-    Icon: Shield,
-    title: 'Clean & Hygienic Facilities',
-    desc: 'Continuous medical-grade sanitation and fresh towel services daily.'
-  },
-  {
-    Icon: Clock,
-    title: 'Personalized Fitness Support',
-    desc: 'Tailored workout blueprints, progress check-ins, and nutritional advice.'
-  }
-];
 
-const featureCardVariants = {
-  initial: { opacity: 0, y: 20 },
-  animate: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-  },
-  hover: {
-    y: -6,
-    scale: 1.02,
-    backgroundColor: 'rgba(23, 23, 23, 0.95)',
-    boxShadow: '0 12px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px 2px rgba(250, 204, 21, 0.08)',
-    transition: { duration: 0.3, ease: 'easeOut' }
-  }
-};
-
-const featureIconVariants = {
-  initial: { scale: 1, rotate: 0, backgroundColor: 'rgba(250, 204, 21, 0.1)', color: 'rgba(250, 204, 21, 1)' },
-  hover: { 
-    scale: 1.12, 
-    rotate: 8, 
-    backgroundColor: 'rgba(250, 204, 21, 0.25)',
-    color: '#ffffff',
-    transition: { type: 'spring', stiffness: 300, damping: 12 }
-  }
-};
-
-const featureTitleVariants = {
-  initial: { color: 'rgb(245, 245, 245)', x: 0 },
-  hover: { 
-    color: 'rgb(250, 204, 21)', 
-    x: 4,
-    transition: { type: 'spring', stiffness: 200, damping: 15 }
-  }
-};
-
-const featureDescVariants = {
-  initial: { color: 'rgb(163, 163, 163)' },
-  hover: { 
-    color: 'rgb(212, 212, 212)',
-    transition: { duration: 0.2 }
-  }
-};
 
 const testimonialSlideVariants = {
   enter: (direction: number) => ({
@@ -1017,54 +942,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
               XTREME FITNESS is a modern training facility designed to help members achieve their fitness goals through expert guidance, premium equipment, and a motivating workout environment. Whether you are a beginner or an experienced athlete, our gym provides everything needed for effective and results-driven training.
             </p>
 
-            {/* FEATURE HIGHLIGHTS */}
-            <motion.div 
-              variants={{
-                initial: {},
-                animate: { transition: { staggerChildren: 0.05 } }
-              }}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-4 text-left" 
-              id="about-features-grid"
-            >
-              {ABOUT_FEATURES.map((feature, idx) => {
-                const { Icon, title, desc } = feature;
-                return (
-                  <motion.div
-                    key={idx}
-                    variants={featureCardVariants}
-                    whileHover="hover"
-                    className="flex items-start space-x-4 bg-neutral-900/50 p-5 rounded-2xl cursor-pointer relative overflow-hidden group"
-                  >
-                    {/* Hover ambient highlight glow inside card */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/0 via-yellow-500/0 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    <motion.div 
-                      variants={featureIconVariants}
-                      className="p-3 rounded-xl border border-yellow-400/20 shrink-0 flex items-center justify-center"
-                    >
-                      <Icon className="h-5 w-5" />
-                    </motion.div>
-                    <div className="space-y-1.5 z-10">
-                      <motion.h4 
-                        variants={featureTitleVariants}
-                        className="font-sans font-bold text-xs uppercase tracking-wider"
-                      >
-                        {title}
-                      </motion.h4>
-                      <motion.p 
-                        variants={featureDescVariants}
-                        className="font-sans text-[11px] leading-relaxed text-neutral-400"
-                      >
-                        {desc}
-                      </motion.p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
+
 
 
 
