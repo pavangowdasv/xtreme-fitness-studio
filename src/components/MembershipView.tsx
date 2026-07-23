@@ -287,12 +287,12 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
                   Modern Strength & Cardio Equipment
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                  Train with imported plate-loaded strength machines, full range of dumbbells up to 50kg, and high-performance commercial treadmills.
+                  Train with imported plate-loaded strength machines, full range of dumbbells up to 30kg, and high-performance commercial treadmills.
                 </p>
               </div>
               <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4 shrink-0 w-full sm:w-44 flex flex-col justify-center text-center">
                 <span className="text-[10px] font-mono text-yellow-400 font-bold">DUMBBELL RANGE</span>
-                <span className="text-2xl font-black text-white mt-1">50 kg</span>
+                <span className="text-2xl font-black text-white mt-1">30 kg</span>
                 <span className="text-[9px] font-mono text-neutral-500 uppercase mt-1.5 pt-1.5 border-t border-neutral-800">HEAVY STRENGTH DECK</span>
               </div>
             </div>
