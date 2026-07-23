@@ -1056,7 +1056,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Box 1: Elite Coaching */}
             <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between group hover:border-neutral-700 transition">
               <div>
@@ -1075,25 +1075,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
               </span>
             </div>
 
-            {/* Box 2: Premium Gear */}
-            <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between group hover:border-neutral-700 transition">
-              <div>
-                <div className="bg-amber-500/10 text-amber-500 h-12 w-12 rounded-xl flex items-center justify-center border border-amber-500/20 mb-6 group-hover:bg-amber-500 group-hover:text-neutral-950 transition-colors">
-                  <Shield className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-sans font-bold text-white uppercase tracking-tight">
-                  PREMIUM IRON FACILITY
-                </h3>
-                <p className="text-sm text-neutral-400 mt-3 leading-relaxed">
-                  Eleiko powerlifting bars, Ivanko calibrated plates, Hammer Strength plate-loaded equipment, Rogue steel cages, and dedicated 30-meter high-friction sprint turf track.
-                </p>
-              </div>
-              <span className="block font-mono text-[10px] text-neutral-600 mt-6 uppercase tracking-widest">
-                [ WORLD CLASS SPEC ]
-              </span>
-            </div>
-
-            {/* Box 3: Supportive Community */}
+            {/* Box 2: Supportive Community */}
             <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between group hover:border-neutral-700 transition">
               <div>
                 <div className="bg-amber-500/10 text-amber-500 h-12 w-12 rounded-xl flex items-center justify-center border border-amber-500/20 mb-6 group-hover:bg-amber-500 group-hover:text-neutral-950 transition-colors">
