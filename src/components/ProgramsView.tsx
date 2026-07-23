@@ -40,7 +40,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     ],
     suitableFor: [
       'Lifters wanting to break past strength plateaus and build physical density',
-      'Athletes looking to construct a powerful physical foundation for sports',
+      'Lifters looking to construct a powerful physical foundation for strength',
       'Competitive powerlifters, strongman trainees, and dedicated recreational lifters'
     ],
     durationInfo: {
@@ -92,7 +92,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     ],
     suitableFor: [
       'Hardgainers and ectomorphs wanting to build solid, lasting muscle bulk',
-      'Competitive athletes seeking to move up a weight class safely and powerfully',
+      'Competitive lifters seeking to move up a weight class safely and powerfully',
       'Anyone wishing to establish a broader, thicker, and more robust physique'
     ],
     durationInfo: {
@@ -119,7 +119,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     suitableFor: [
       'Beginners wanting premium guidance and a highly safe path into lifting',
       'Intermediate to advanced lifters looking to adjust minor technical flaws',
-      'Athletes recovering from past injuries who need careful mechanical management'
+      'Lifters recovering from past injuries who need careful mechanical management'
     ],
     durationInfo: {
       length: 'Ongoing Bespoke Integration',
@@ -144,7 +144,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     ],
     suitableFor: [
       'Fitness enthusiasts searching for a highly challenging, fast-paced environment',
-      'Former competitive athletes wanting to maintain exceptional functional fitness',
+      'Former competitive lifters wanting to maintain exceptional functional fitness',
       'Anyone wanting to build total body coordination, quickness, and stamina'
     ],
     durationInfo: {
@@ -195,7 +195,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
       'Monthly bio-metric tracking reviews to ensure safe and continuous progression'
     ],
     suitableFor: [
-      'Dedicated athletes wishing to squeeze the absolute maximum results from workouts',
+      'Dedicated lifters wishing to squeeze the absolute maximum results from workouts',
       'Performance and endurance lifters battling training exhaustion or soreness',
       'Anyone wanting to build an optimal dietary framework for health longevity'
     ],
@@ -207,7 +207,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
   },
   'body-building': {
     name: 'ELITE BODYBUILDING & PHYSIQUE',
-    overview: 'Designed for competitive physique athletes and bodybuilding enthusiasts who aim to build maximum hypertrophy, aesthetic symmetry, and extreme muscular definition. We manipulate volume, load, and fatigue to sculpt your ideal physical frame.',
+    overview: 'Designed for competitive bodybuilders and physique enthusiasts who aim to build maximum hypertrophy, aesthetic symmetry, and extreme muscular definition. We manipulate volume, load, and fatigue to sculpt your ideal physical frame.',
     benefits: [
       'Achieve maximum sarcoplasmic hypertrophy across targeted muscle groups',
       'Map out and fix physical symmetry imbalances through weak-point stimulus',

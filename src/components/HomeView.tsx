@@ -27,7 +27,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     overview: 'Build elite-level strength, improve muscular density, and unlock ultimate physical power. This system uses proven progressive overload protocols, focusing on foundational compound lifts including the squat, bench press, deadlift, and overhead press.',
     benefits: ['Maximize absolute compound lift strength and bone density','Enhance neuromuscular coordination and CNS motor unit recruitment','Reinforce ligament thickness, joint structures, and overall skeletal stability','Accelerate myofibrillar hypertrophy for thick, functional muscular power'],
     trainingMethods: ['Periodized progressive overload blocks with targeted microcycles','One-Rep Max (1RM) baseline testing and percentage-based loading sheets','Meticulous multi-joint compound mechanics and bar path bio-feedback analysis','Autoregulated volume thresholds using Rate of Perceived Exertion (RPE)'],
-    suitableFor: ['Lifters wanting to break past strength plateaus','Athletes looking to construct a powerful physical foundation','Competitive powerlifters and dedicated recreational lifters'],
+    suitableFor: ['Lifters wanting to break past strength plateaus','Lifters looking to construct a powerful physical foundation','Competitive powerlifters and dedicated recreational lifters'],
     durationInfo: { length: '12-Week Structured Macrocycle', frequency: '4 sessions per week (Upper/Lower Split)', sessionLength: '75-90 minutes per session' }
   },
   'weight-loss': {
@@ -43,7 +43,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     overview: 'Calibrated specifically for individuals struggling to build high-quality muscle volume. This program pairs high-volume sarcoplasmic hypertrophy techniques with dense calorie programming to safely and systematically pack on size and athletic frame thickness.',
     benefits: ['Trigger significant muscular cross-sectional area growth (hypertrophy)','Keep your body in a sustained anabolic state through structured caloric surplus','Improve structural leverage, boosting absolute compound loading potential','Enhance intramuscular glycogen storage capacity for continuous power'],
     trainingMethods: ['Hypertrophy-focused range-of-motion loading and deep mechanical tension','Targeted muscle-mind connection drills and isolated fatigue mapping','Progressively scaled volume schemes across focused weekly microcycles','Consistent caloric tracking adjustments and recovery pacing logs'],
-    suitableFor: ['Hardgainers and ectomorphs wanting to build solid, lasting muscle bulk','Competitive athletes seeking to move up a weight class safely','Anyone wishing to establish a broader, thicker, and more robust physique'],
+    suitableFor: ['Hardgainers and ectomorphs wanting to build solid, lasting muscle bulk','Competitive lifters seeking to move up a weight class safely','Anyone wishing to establish a broader, thicker, and more robust physique'],
     durationInfo: { length: '10-Week Muscle Building Phase', frequency: '4 sessions per week (Push/Pull Splits)', sessionLength: '60-75 minutes per session' }
   },
   'personal-training': {
@@ -51,7 +51,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     overview: 'The ultimate bespoke development package. Work directly with Head Trainer MITHUN GOWDA SHIVARAJU to map out a highly specific movement trajectory, perform complex biomechanics audits, and receive immediate coaching.',
     benefits: ['Enjoy custom workout design matching your exact skeletal leverages','Perform detailed movement quality audits to identify and fix structural issues','Receive instant feedback and real-time posture adjustments on heavy compounds','Develop intense accountability, consistent discipline, and professional habits'],
     trainingMethods: ['Detailed joint angle checks and structural biomechanical assessments','Continuous velocity tracking and heart-rate monitoring for intensity control','Customized CNS recovery sheets based on sleep metrics','Individual progression reviews and weekly performance target adjustments'],
-    suitableFor: ['Beginners wanting premium guidance and a highly safe path into lifting','Intermediate to advanced lifters looking to adjust minor technical flaws','Athletes recovering from past injuries who need careful mechanical management'],
+    suitableFor: ['Beginners wanting premium guidance and a highly safe path into lifting','Intermediate to advanced lifters looking to adjust minor technical flaws','Lifters recovering from past injuries who need careful mechanical management'],
     durationInfo: { length: 'Ongoing Bespoke Integration', frequency: 'Recommended 2-4 sessions / week', sessionLength: '60 minutes per session' }
   },
   'cross-fit': {
@@ -59,7 +59,7 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     overview: 'High-intensity, multi-planar, fully functional training engineered to forge resilient, multi-directional performance. Develop speed, cardiovascular power, gymnastic balance, and Olympic-lifting efficiency in a supportive team environment.',
     benefits: ['Generate exceptional multi-directional power and high-velocity output','Dramatically raise anaerobic limits and overall cardiovascular endurance','Enhance multi-planar joint mobility, shoulder stability, and core control','Develop high physical adaptability to tackle varied physical tasks'],
     trainingMethods: ['Olympic lifting technique instruction (Snatch, Clean & Jerk, Overhead)','Bodyweight gymnastics mastery, rings coordination, and handstand work','High-intensity interval training via customized Workout of the Day (WOD) blocks','Rowing, stationary cycling, plyometric jumps, and heavy carrying drills'],
-    suitableFor: ['Fitness enthusiasts searching for a highly challenging, fast-paced environment','Former competitive athletes wanting to maintain exceptional functional fitness','Anyone wanting to build total body coordination, quickness, and stamina'],
+    suitableFor: ['Fitness enthusiasts searching for a highly challenging, fast-paced environment','Former competitive lifters wanting to maintain exceptional functional fitness','Anyone wanting to build total body coordination, quickness, and stamina'],
     durationInfo: { length: '8-Week Conditioning Program', frequency: '4-5 sessions per week', sessionLength: '60 minutes per session' }
   },
   'diet-counselling': {
@@ -75,12 +75,12 @@ const DETAILED_PROGRAM_CONTENT: Record<string, {
     overview: 'Combine your rigorous training routines with targeted performance supplementation and metabolic fuel. This support program handles pre-workout optimization, intra-workout muscle preservation, and post-workout amino-acid synthesis.',
     benefits: ['Significantly speed up muscle tissue repair and optimize systemic recovery','Avoid unnecessary expense by focusing on scientifically proven supplements','Maximize explosive force, power, and physical focus using clean, safe fuels','Ensure proper nutrient absorption and optimal hydration during workouts'],
     trainingMethods: ['Bespoke supplementation audits covering timing, dosing, and efficacy metrics','Direct intra-workout cellular hydration protocols for long-term endurance','Strategic carb-loading schedules tailored for intense performance days','Monthly bio-metric tracking reviews to ensure safe and continuous progression'],
-    suitableFor: ['Dedicated athletes wishing to squeeze the absolute maximum results from workouts','Performance and endurance lifters battling training exhaustion or soreness','Anyone wanting to build an optimal dietary framework for health longevity'],
+    suitableFor: ['Dedicated lifters wishing to squeeze the absolute maximum results from workouts','Performance and endurance lifters battling training exhaustion or soreness','Anyone wanting to build an optimal dietary framework for health longevity'],
     durationInfo: { length: 'Ongoing Supplementation Auditing', frequency: 'Monthly menu reviews', sessionLength: 'Self-guided tracking with coach supervision' }
   },
   'body-building': {
     name: 'ELITE BODYBUILDING & PHYSIQUE',
-    overview: 'Designed for competitive physique athletes and bodybuilding enthusiasts who aim to build maximum hypertrophy, aesthetic symmetry, and extreme muscular definition. We manipulate volume, load, and fatigue to sculpt your ideal physical frame.',
+    overview: 'Designed for competitive bodybuilders and physique enthusiasts who aim to build maximum hypertrophy, aesthetic symmetry, and extreme muscular definition. We manipulate volume, load, and fatigue to sculpt your ideal physical frame.',
     benefits: ['Achieve maximum sarcoplasmic hypertrophy across targeted muscle groups','Map out and fix physical symmetry imbalances through weak-point stimulus','Gain professional stage posing tips, lighting preparation, and muscle-peak advice','Achieve jaw-dropping vascularity, muscle fullness, and classic aesthetic dimensions'],
     trainingMethods: ['Hypertrophy-specific movement selection using high-tension isolation paths','Weekly structural skinfold fat calipers and circumference measurements','Calibrated peak-week carbohydrate depletion and load-up scheduling','High-intensity drop-sets, biomechanical supersets, and static hold structures'],
     suitableFor: ['Physique, Classic, or Open Bodybuilding competitors seeking pro coaching','Experienced lifters wishing to take their physical development to the absolute limit','Anyone dedicated to packing on maximum muscle mass and shredding fat'],
@@ -939,7 +939,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
             </div>
 
             <p className="text-neutral-400 text-lg leading-relaxed font-sans font-normal max-w-3xl mx-auto">
-              XTREME FITNESS is a modern training facility designed to help members achieve their fitness goals through expert guidance, premium equipment, and a motivating workout environment. Whether you are a beginner or an experienced athlete, our gym provides everything needed for effective and results-driven training.
+              XTREME FITNESS is a modern training facility designed to help members achieve their fitness goals through expert guidance, premium equipment, and a motivating workout environment. Whether you are a beginner or an experienced lifter, our gym provides everything needed for effective and results-driven training.
             </p>
 
 
@@ -1103,7 +1103,7 @@ export default function HomeView({ setCurrentTab, onOpenEnroll }: HomeViewProps)
                   XTREME COMRADERY
                 </h3>
                 <p className="text-sm text-neutral-400 mt-3 leading-relaxed">
-                  No egos. Just pure commitment. Surround yourself with driven builders, competitive lifters, and active athletes who push your training standards daily.
+                  No egos. Just pure commitment. Surround yourself with driven builders, competitive lifters, and active fitness enthusiasts who push your training standards daily.
                 </p>
               </div>
               <span className="block font-mono text-[10px] text-neutral-600 mt-6 uppercase tracking-widest">

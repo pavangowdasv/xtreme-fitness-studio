@@ -153,7 +153,7 @@ export const TRAINER_DATA: Trainer[] = [
     id: 'marcus-vance',
     name: 'MITHUN GOWDA SHIVARAJU',
     role: 'Head Trainer',
-    bio: 'Former competitive powerlifter and strength coach with over 16+ years of coaching elite athletes. Specialized in mechanical analysis, customized macro-cycles, and breaking personal records.',
+    bio: 'Former competitive powerlifter and strength coach with over 16+ years of coaching elite lifters. Specialized in mechanical analysis, customized macro-cycles, and breaking personal records.',
     experience: '16+ Years Elite Coaching',
     specialty: 'Powerlifting, Hypertrophy, Periodization',
     image: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&q=80&w=1200',
@@ -205,8 +205,8 @@ export const PLAN_DATA: Plan[] = [
     popular: false,
   },
   {
-    id: 'power-athlete',
-    name: 'Power Athlete',
+    id: 'power-performance',
+    name: 'Power Performance',
     priceMonthly: 4500,
     priceAnnual: 3500,
     tier: 'gold',
@@ -231,7 +231,7 @@ export const PLAN_DATA: Plan[] = [
     badge: 'Pro Tier',
     description: 'The ultimate fitness ecosystem. Direct premium coaching and high-end recovery benefits.',
     features: [
-      'Everything in Power Athlete',
+      'Everything in Power Performance',
       'Monthly 1-on-1 personal coaching session',
       'Customized nutrition & macro plans updated weekly',
       'Unlimited group program guidance & posture check',
@@ -248,7 +248,7 @@ export const TESTIMONIAL_DATA: Testimonial[] = [
     id: 't-1',
     name: 'Puneeth V',
     reviewAge: '6 months ago',
-    content: "Joining Xtreme Fitness Studio has been one of the best decisions I've made for my fitness journey. The facilities are modern, clean, and well-maintained, with a wide range of equipment that suits beginners and advanced athletes alike. The trainers are knowledgeable, approachable, and always ready to guide you with personalized tips and motivation.\n\nI especially appreciate the friendly atmosphere—it feels more like a community than just a gym. Whether it's strength training or cardio, there's something for everyone.\n\nHighly recommend Xtreme Fitness Studio to anyone looking to stay fit and truly enjoy the process."
+    content: "Joining Xtreme Fitness Studio has been one of the best decisions I've made for my fitness journey. The facilities are modern, clean, and well-maintained, with a wide range of equipment that suits beginners and advanced lifters alike. The trainers are knowledgeable, approachable, and always ready to guide you with personalized tips and motivation.\n\nI especially appreciate the friendly atmosphere—it feels more like a community than just a gym. Whether it's strength training or cardio, there's something for everyone.\n\nHighly recommend Xtreme Fitness Studio to anyone looking to stay fit and truly enjoy the process."
   },
   {
     id: 't-2',
@@ -298,7 +298,7 @@ export const FAQ_DATA: FAQItem[] = [
   {
     id: 'faq-1',
     question: 'Can I freeze my membership if I travel?',
-    answer: 'Absolutely. Power Athlete and Elite Powerhouse members can freeze their membership for up to 60 days per calendar year. You can do this easily with 48 hours notice through our app or by sending an email to our support team.',
+    answer: 'Absolutely. Power Performance and Elite Powerhouse members can freeze their membership for up to 60 days per calendar year. You can do this easily with 48 hours notice through our app or by sending an email to our support team.',
     category: 'Membership',
   },
   {

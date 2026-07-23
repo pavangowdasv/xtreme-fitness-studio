@@ -124,7 +124,7 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xs sm:text-sm text-neutral-400 max-w-xl mx-auto mt-4 leading-relaxed font-mono uppercase tracking-wider"
           >
-            A competitive natural athlete dedicated to maximizing your physical performance and muscle design.
+            A competitive natural bodybuilder dedicated to maximizing your physical performance and muscle design.
           </motion.p>
         </div>
       </section>
@@ -205,13 +205,13 @@ export default function TrainersView({ onOpenEnroll }: TrainersViewProps) {
               <p>
                 MITHUN GOWDA SHIVARAJU is the athletic architect and cornerstone of performance at XTREME FITNESS STUDIO. 
                 As a former competitive powerlifter and recognized natural bodybuilding competitor, he specializes in biomechanical analysis, advanced loading models, and peak physique transformations. 
-                With over 16+ years of coaching elite athletes and everyday lifters, Mithun brings a scientific, progressive approach to force creation and subcutaneous fat depletion.
+                With over 16+ years of coaching elite lifters and everyday fitness enthusiasts, Mithun brings a scientific, progressive approach to force creation and subcutaneous fat depletion.
               </p>
               <p>
-                Deeply rooted in the Bangalore fitness revolution, Mithun has spent over a decade shaping training standards and elevating athletes across premier fitness centers in Karnataka. As a highly sought-after performance consultant, he has built custom programs that have guided numerous state champions and natural bodybuilders to gold-medal placements in ICN India championships.
+                Deeply rooted in the Bangalore fitness revolution, Mithun has spent over a decade shaping training standards and elevating lifters across premier fitness centers in Karnataka. As a highly sought-after performance consultant, he has built custom programs that have guided numerous state champions and natural bodybuilders to gold-medal placements in ICN India championships.
               </p>
               <p>
-                His systematic approach combines state-of-the-art biomechanics with customized metabolic plans, making elite-level strength and aesthetics accessible to both competitive athletes and dedicated recreational lifters in Bangalore.
+                His systematic approach combines state-of-the-art biomechanics with customized metabolic plans, making elite-level strength and aesthetics accessible to both competitive bodybuilders and dedicated recreational lifters in Bangalore.
               </p>
             </div>
 

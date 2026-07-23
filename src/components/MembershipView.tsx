@@ -407,7 +407,7 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
             FORGE YOUR ULTIMATE PHYSIQUE
           </h2>
           <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed max-w-md mx-auto">
-            Join the ranks of competitive lifters, active performance athletes, and dedicated builders today.
+            Join the ranks of competitive lifters, active performance trainees, and dedicated builders today.
           </p>
           <div className="pt-4">
             <button
