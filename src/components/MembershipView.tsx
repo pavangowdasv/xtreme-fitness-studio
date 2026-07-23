@@ -228,8 +228,8 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
         </div>
 
         {/* PERSONAL TRAINING UPGRADE SECTION */}
-        <div className="bg-neutral-900/40 border border-neutral-900 p-6 sm:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 hover:border-yellow-400/20 transition-all duration-300" id="personal-training-upgrade">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left max-w-2xl">
+        <div className="bg-neutral-900/40 border border-neutral-900 p-6 sm:p-8 rounded-2xl flex flex-col lg:flex-row items-center justify-between gap-8 hover:border-yellow-400/20 transition-all duration-300" id="personal-training-upgrade">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left max-w-xl">
             <div className="bg-yellow-400/10 text-yellow-400 p-3 rounded-xl border border-yellow-400/20 shrink-0">
               <Award className="h-6 w-6" />
             </div>
@@ -250,10 +250,31 @@ export default function MembershipView({ onOpenEnroll, setCurrentTab }: Membersh
               </p>
             </div>
           </div>
-          <div className="shrink-0 text-center md:text-right bg-neutral-950/80 border border-neutral-800/60 p-4 sm:px-6 rounded-xl min-w-[200px] w-full md:w-auto">
-            <span className="block font-mono text-[9px] text-neutral-500 uppercase tracking-widest">Master Coach Rate</span>
-            <span className="block text-2xl font-sans font-black text-yellow-400 mt-1">₹8,000</span>
-            <span className="block font-mono text-[9px] text-neutral-400 mt-0.5">PER MONTH ADD-ON</span>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto shrink-0">
+            {/* 1 Month Option */}
+            <div className="flex-1 lg:w-44 bg-neutral-950/80 border border-neutral-800/60 p-4 rounded-xl text-center flex flex-col justify-between">
+              <div>
+                <span className="block font-mono text-[9px] text-neutral-500 uppercase tracking-widest">Monthly Option</span>
+                <span className="block text-2xl font-sans font-black text-white mt-1">₹8,000</span>
+                <span className="block font-mono text-[9px] text-neutral-400 mt-0.5">PER MONTH</span>
+              </div>
+            </div>
+
+            {/* 3 Months Option with Discount */}
+            <div className="flex-1 lg:w-52 bg-gradient-to-b from-neutral-900 to-neutral-950 border border-yellow-400/50 p-4 rounded-xl text-center relative flex flex-col justify-between shadow-lg shadow-yellow-400/5">
+              <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-yellow-400 text-black font-mono text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap">
+                SAVE ₹6,000
+              </div>
+              <div className="pt-1">
+                <span className="block font-mono text-[9px] text-yellow-400 font-bold uppercase tracking-widest">3 Months Option</span>
+                <div className="flex items-center justify-center gap-2 mt-1">
+                  <span className="text-xs text-neutral-500 line-through font-mono">₹24,000</span>
+                  <span className="text-2xl font-sans font-black text-yellow-400">₹18,000</span>
+                </div>
+                <span className="block font-mono text-[9px] text-neutral-300 mt-0.5">FOR 3 MONTHS (₹6,000/MO)</span>
+              </div>
+            </div>
           </div>
         </div>
 
